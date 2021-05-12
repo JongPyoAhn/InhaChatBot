@@ -43,9 +43,10 @@ class SignInViewController: UIViewController {
                 Database.database().reference().child("users").child(uid!).setValue(userModel.toJSON(), withCompletionBlock: { (err, ref) in
                     if(err == nil){
                         let alert = UIAlertController(title: "회원가입 완료", message: "회원가입이 완료되었습니다!", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default))
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                            self.cancelEvent()
+                        }))
                         self.present(alert, animated: true, completion: nil)
-                        self.cancelEvent()
                 }
             })
         }
