@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>980575349348-sbkob2s95g09tmak9s5gra9tp5rfp8j1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.980575349348-sbkob2s95g09tmak9s5gra9tp5rfp8j1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBbE9T9N30yOoQejm20fBGjXZeBbfx4z2w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>980575349348</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.album.InhaChatBot</string>
+	<key>PROJECT_ID</key>
+	<string>inhachatbot</string>
+	<key>STORAGE_BUCKET</key>
+	<string>inhachatbot.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:980575349348:ios:b4a34b4ae9ed07944dcd71</string>
+	<key>DATABASE_URL</key>
+	<string>https://inhachatbot-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

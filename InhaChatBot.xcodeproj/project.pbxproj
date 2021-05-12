@@ -3,19 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533B008C26440C8F00381F22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 533B008B26440C8F00381F22 /* GoogleService-Info.plist */; };
+		533B009026440FEB00381F22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B008F26440FEB00381F22 /* LoginViewController.swift */; };
+		533B00922644307800381F22 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00912644307800381F22 /* SignInViewController.swift */; };
+		533B009D26451BEF00381F22 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B009C26451BEF00381F22 /* AccountViewController.swift */; };
+		533B00CD26463EB800381F22 /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00CC26463EB800381F22 /* ChatBotViewController.swift */; };
+		533B00CF26463ED100381F22 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00CE26463ED100381F22 /* QuestionViewController.swift */; };
+		533B00D126463F0C00381F22 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D026463F0C00381F22 /* PeopleViewController.swift */; };
+		533B00D326463F3800381F22 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D226463F3800381F22 /* UserModel.swift */; };
+		533B00D52646431D00381F22 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D42646431D00381F22 /* ChatModel.swift */; };
+		533B00D72647AB4C00381F22 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D62647AB4C00381F22 /* Util.swift */; };
 		5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55B2644097100CD35B3 /* AppDelegate.swift */; };
 		5353E55E2644097100CD35B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55D2644097100CD35B3 /* SceneDelegate.swift */; };
 		5353E5602644097100CD35B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55F2644097100CD35B3 /* ViewController.swift */; };
 		5353E5632644097100CD35B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5612644097100CD35B3 /* Main.storyboard */; };
 		5353E5652644097200CD35B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5642644097200CD35B3 /* Assets.xcassets */; };
 		5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5662644097200CD35B3 /* LaunchScreen.storyboard */; };
+		D0C1247BD506F271D412E39C /* Pods_InhaChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA1B1ADB6F1AA4DCD2D9598 /* Pods_InhaChatBot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39B5AB3C593E3974F9EF1E81 /* Pods-InhaChatBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InhaChatBot.release.xcconfig"; path = "Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot.release.xcconfig"; sourceTree = "<group>"; };
+		533B008B26440C8F00381F22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		533B008F26440FEB00381F22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		533B00912644307800381F22 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		533B009C26451BEF00381F22 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		533B00CC26463EB800381F22 /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
+		533B00CE26463ED100381F22 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		533B00D026463F0C00381F22 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		533B00D226463F3800381F22 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		533B00D42646431D00381F22 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		533B00D62647AB4C00381F22 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		5353E5582644097100CD35B3 /* InhaChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InhaChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5353E55B2644097100CD35B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5353E55D2644097100CD35B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +46,8 @@
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5353E5692644097200CD35B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA1B1ADB6F1AA4DCD2D9598 /* Pods_InhaChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InhaChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53352D785F89A18F6D77AC2 /* Pods-InhaChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InhaChatBot.debug.xcconfig"; path = "Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C1247BD506F271D412E39C /* Pods_InhaChatBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D137DB6D5C3F72034B1D51F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCA1B1ADB6F1AA4DCD2D9598 /* Pods_InhaChatBot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		533B008E26440D7100381F22 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5353E55F2644097100CD35B3 /* ViewController.swift */,
+				533B008F26440FEB00381F22 /* LoginViewController.swift */,
+				533B00912644307800381F22 /* SignInViewController.swift */,
+				533B00D026463F0C00381F22 /* PeopleViewController.swift */,
+				533B00CE26463ED100381F22 /* QuestionViewController.swift */,
+				533B009C26451BEF00381F22 /* AccountViewController.swift */,
+				533B00CC26463EB800381F22 /* ChatBotViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		533B009526450A1300381F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				533B00D226463F3800381F22 /* UserModel.swift */,
+				533B00D42646431D00381F22 /* ChatModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5353E54F2644097100CD35B3 = {
 			isa = PBXGroup;
 			children = (
 				5353E55A2644097100CD35B3 /* InhaChatBot */,
 				5353E5592644097100CD35B3 /* Products */,
+				E2B3592EE400DFD266D8C456 /* Pods */,
+				3D137DB6D5C3F72034B1D51F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +114,27 @@
 		5353E55A2644097100CD35B3 /* InhaChatBot */ = {
 			isa = PBXGroup;
 			children = (
+				533B009526450A1300381F22 /* Model */,
+				533B008E26440D7100381F22 /* ViewController */,
 				5353E55B2644097100CD35B3 /* AppDelegate.swift */,
+				533B00D62647AB4C00381F22 /* Util.swift */,
 				5353E55D2644097100CD35B3 /* SceneDelegate.swift */,
-				5353E55F2644097100CD35B3 /* ViewController.swift */,
 				5353E5612644097100CD35B3 /* Main.storyboard */,
 				5353E5642644097200CD35B3 /* Assets.xcassets */,
 				5353E5662644097200CD35B3 /* LaunchScreen.storyboard */,
 				5353E5692644097200CD35B3 /* Info.plist */,
+				533B008B26440C8F00381F22 /* GoogleService-Info.plist */,
 			);
 			path = InhaChatBot;
+			sourceTree = "<group>";
+		};
+		E2B3592EE400DFD266D8C456 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D53352D785F89A18F6D77AC2 /* Pods-InhaChatBot.debug.xcconfig */,
+				39B5AB3C593E3974F9EF1E81 /* Pods-InhaChatBot.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5353E56C2644097200CD35B3 /* Build configuration list for PBXNativeTarget "InhaChatBot" */;
 			buildPhases = (
+				CA946D891FDEE7CADB75ADC3 /* [CP] Check Pods Manifest.lock */,
 				5353E5542644097100CD35B3 /* Sources */,
 				5353E5552644097100CD35B3 /* Frameworks */,
 				5353E5562644097100CD35B3 /* Resources */,
+				AE09C2904BBCE007109AC894 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */,
+				533B008C26440C8F00381F22 /* GoogleService-Info.plist in Resources */,
 				5353E5652644097200CD35B3 /* Assets.xcassets in Resources */,
 				5353E5632644097100CD35B3 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +205,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AE09C2904BBCE007109AC894 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA946D891FDEE7CADB75ADC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InhaChatBot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5353E5542644097100CD35B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533B009026440FEB00381F22 /* LoginViewController.swift in Sources */,
+				533B00CD26463EB800381F22 /* ChatBotViewController.swift in Sources */,
+				533B00D52646431D00381F22 /* ChatModel.swift in Sources */,
 				5353E5602644097100CD35B3 /* ViewController.swift in Sources */,
 				5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */,
+				533B00922644307800381F22 /* SignInViewController.swift in Sources */,
+				533B00D126463F0C00381F22 /* PeopleViewController.swift in Sources */,
+				533B00D72647AB4C00381F22 /* Util.swift in Sources */,
 				5353E55E2644097100CD35B3 /* SceneDelegate.swift in Sources */,
+				533B009D26451BEF00381F22 /* AccountViewController.swift in Sources */,
+				533B00D326463F3800381F22 /* UserModel.swift in Sources */,
+				533B00CF26463ED100381F22 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +407,7 @@
 		};
 		5353E56D2644097200CD35B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53352D785F89A18F6D77AC2 /* Pods-InhaChatBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +427,7 @@
 		};
 		5353E56E2644097200CD35B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B5AB3C593E3974F9EF1E81 /* Pods-InhaChatBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
