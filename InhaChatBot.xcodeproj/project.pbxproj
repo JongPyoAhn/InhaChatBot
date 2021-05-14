@@ -23,6 +23,9 @@
 		5353E5632644097100CD35B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5612644097100CD35B3 /* Main.storyboard */; };
 		5353E5652644097200CD35B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5642644097200CD35B3 /* Assets.xcassets */; };
 		5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5662644097200CD35B3 /* LaunchScreen.storyboard */; };
+		53F96E7F264CFE1800B06DFA /* AssistantMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */; };
+		53F96E81264CFF7E00B06DFA /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */; };
+		53F96E83264D074400B06DFA /* AssistantError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E82264D074400B06DFA /* AssistantError.swift */; };
 		D0C1247BD506F271D412E39C /* Pods_InhaChatBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA1B1ADB6F1AA4DCD2D9598 /* Pods_InhaChatBot.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5353E5692644097200CD35B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantMessages.swift; sourceTree = "<group>"; };
+		53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BMSCredentials.plist; sourceTree = "<group>"; };
+		53F96E82264D074400B06DFA /* AssistantError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantError.swift; sourceTree = "<group>"; };
 		CCA1B1ADB6F1AA4DCD2D9598 /* Pods_InhaChatBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InhaChatBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53352D785F89A18F6D77AC2 /* Pods-InhaChatBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InhaChatBot.debug.xcconfig"; path = "Target Support Files/Pods-InhaChatBot/Pods-InhaChatBot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +95,7 @@
 			children = (
 				533B00D226463F3800381F22 /* UserModel.swift */,
 				533B00D42646431D00381F22 /* ChatModel.swift */,
+				53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,11 +124,13 @@
 				533B009526450A1300381F22 /* Model */,
 				533B008E26440D7100381F22 /* ViewController */,
 				5353E55B2644097100CD35B3 /* AppDelegate.swift */,
+				53F96E82264D074400B06DFA /* AssistantError.swift */,
 				533B00D62647AB4C00381F22 /* Util.swift */,
 				5353E55D2644097100CD35B3 /* SceneDelegate.swift */,
 				5353E5612644097100CD35B3 /* Main.storyboard */,
 				5353E5642644097200CD35B3 /* Assets.xcassets */,
 				5353E5662644097200CD35B3 /* LaunchScreen.storyboard */,
+				53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */,
 				5353E5692644097200CD35B3 /* Info.plist */,
 				533B008B26440C8F00381F22 /* GoogleService-Info.plist */,
 			);
@@ -197,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */,
+				53F96E81264CFF7E00B06DFA /* BMSCredentials.plist in Resources */,
 				533B008C26440C8F00381F22 /* GoogleService-Info.plist in Resources */,
 				5353E5652644097200CD35B3 /* Assets.xcassets in Resources */,
 				5353E5632644097100CD35B3 /* Main.storyboard in Resources */,
@@ -255,7 +265,9 @@
 				533B009026440FEB00381F22 /* LoginViewController.swift in Sources */,
 				533B00CD26463EB800381F22 /* ChatBotViewController.swift in Sources */,
 				533B00D52646431D00381F22 /* ChatModel.swift in Sources */,
+				53F96E83264D074400B06DFA /* AssistantError.swift in Sources */,
 				5353E5602644097100CD35B3 /* ViewController.swift in Sources */,
+				53F96E7F264CFE1800B06DFA /* AssistantMessages.swift in Sources */,
 				5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */,
 				533B00922644307800381F22 /* SignInViewController.swift in Sources */,
 				533B00D126463F0C00381F22 /* PeopleViewController.swift in Sources */,

@@ -14,6 +14,7 @@ class AccountViewController: UIViewController{
     var email: String?
     var password: String?
     var studentID: String?
+    var currentPassowrd: String?
     
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var StudentIDText: UITextField!
@@ -29,7 +30,8 @@ class AccountViewController: UIViewController{
         bringEmail()
         bringstudentID()
         logoutBtn.addTarget(self, action: #selector(logoutEvent), for: .touchUpInside)
-//        confirmBtn.addTarget(self, action: #selector(changePassword(email:currentPassword:newPassword:completion:)), for: .touchUpInside)
+        confirmBtn.addTarget(self, action: #selector(changePW), for: .touchUpInside)
+        
     }
     
     //현재 접속한 사용자의 email정보 가져오기
@@ -62,30 +64,13 @@ class AccountViewController: UIViewController{
             }
         })
     }
-    //비밀번호 변경
-    func changePassword(email: String, currentPassword: String, newPassword: String, completion: @escaping (Error?) -> Void) {
-            let credential = EmailAuthProvider.credential(withEmail: email, password: currentPassword)
-            Auth.auth().currentUser?.reauthenticate(with: credential, completion: { (result, error) in
-                if let error = error {
-                    completion(error)
-                }
-                else {
-                    Auth.auth().currentUser?.updatePassword(to: newPassword, completion: { (error) in
-                        completion(error)
-                    })
-                }
-            })
-        }
-    
-    @objc func confirm(){
-        changePassword(email: email!, currentPassword: password!, newPassword: passwordText.text!, completion: {
-            (error) in
-            if(error == nil){
-            print("error")
+    @objc func changePW(){
+        Auth.auth().currentUser?.updatePassword(to: passwordText.text!) { (error) in
+            if let error = error {
+                print(error)
             }
-        })
+            }
     }
-    
     @objc func logoutEvent(){
         self.dismiss(animated: true, completion: nil)
     }

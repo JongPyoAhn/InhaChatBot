@@ -1,4 +1,7 @@
 PODS:
+  - BMSAnalyticsAPI (2.3.1)
+  - BMSCore (2.6.0):
+    - BMSAnalyticsAPI (~> 2.3)
   - Firebase/Auth (7.9.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 7.9.0)
@@ -44,26 +47,39 @@ PODS:
   - GoogleUtilities/Reachability (7.3.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - IBMSwiftSDKCore (1.0.0)
+  - IBMWatsonAssistantV1 (3.5.1):
+    - IBMSwiftSDKCore (~> 1.0.0)
   - leveldb-library (1.22.1)
+  - MessageKit (0.13.5)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - ObjectMapper (4.2.0)
   - PromisesObjC (1.2.12)
   - SnapKit (5.0.1)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - BMSCore (~> 2.6.0)
   - Firebase/Auth
   - Firebase/Database
+  - IBMWatsonAssistantV1 (~> 3.5.0)
+  - MessageKit
+  - NVActivityIndicatorView
   - ObjectMapper
   - SnapKit (~> 5.0.0)
   - TextFieldEffects
 
 SPEC REPOS:
   trunk:
+    - BMSAnalyticsAPI
+    - BMSCore
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -72,14 +88,20 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - IBMSwiftSDKCore
+    - IBMWatsonAssistantV1
     - leveldb-library
+    - MessageKit
     - nanopb
+    - NVActivityIndicatorView
     - ObjectMapper
     - PromisesObjC
     - SnapKit
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  BMSAnalyticsAPI: f9c740eb3c0857c0955e58a10321a96b5d85304e
+  BMSCore: 969b124f0170d0113a0926e73118057ca7d1eab3
   Firebase: d8bd6bd34b4c7ed57bfdd056c66ff5adcdde53ab
   FirebaseAuth: 20625f04fdd213995249a82375b3dab39b1c136c
   FirebaseCore: 0798738ad1ae0fda67e17c7b9081241c431c6859
@@ -88,13 +110,17 @@ SPEC CHECKSUMS:
   GoogleDataTransport: b006084b73915a42c28a3466961a4edda3065da6
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  IBMSwiftSDKCore: 54ad77b03a4d27b218ba514580197db3b89a96ca
+  IBMWatsonAssistantV1: b36e752b4a9ce08a925cae3e432dc2d07ba481ec
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  MessageKit: c4bd50e285a0f0761bc23a2e982aa7840873c4f5
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: c513a600e1c5df18d9dce3b09757d429b8b04a21
+PODFILE CHECKSUM: 220bde161d32d8a319f0585925c5c9109f3d143b
 
 COCOAPODS: 1.10.1

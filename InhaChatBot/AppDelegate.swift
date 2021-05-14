@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import BMSCore
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

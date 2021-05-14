@@ -158,9 +158,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xb9-yo-ewr">
-                                <rect key="frame" x="0.0" y="88" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="78" width="414" height="752"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="01U-Da-mdF">
+                                    <rect key="frame" x="0.0" y="110.00000034679067" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <state key="normal" title="챗봇과 대화하기!!">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="61" id="xSn-S2-Ddz" customClass="PersonCell" customModule="InhaChatBot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="61"/>
@@ -214,9 +223,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="목록" id="yLc-NK-ECQ"/>
                     <connections>
+                        <outlet property="chatbotBtn" destination="01U-Da-mdF" id="vgE-UZ-3hm"/>
                         <outlet property="tableview" destination="xb9-yo-ewr" id="vTV-Ps-ayv"/>
                         <segue destination="FY4-ka-APu" kind="push" identifier="QuestionChatSegue" id="bad-0G-qa1"/>
-                        <segue destination="d9J-s7-6bm" kind="presentation" modalPresentationStyle="fullScreen" id="ud3-qw-pja"/>
+                        <segue destination="d9J-s7-6bm" kind="presentation" identifier="chatbotSegue" modalPresentationStyle="fullScreen" id="ud3-qw-pja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDE-UF-I7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

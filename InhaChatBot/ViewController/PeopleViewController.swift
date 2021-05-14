@@ -13,6 +13,8 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
   
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var chatbotBtn: UIButton!
+    
     
     //친구목록 어레이
     var array : [UserModel] = []
@@ -25,6 +27,13 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //상대방 UID
     var destinationUid : String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        myUid = Auth.auth().currentUser?.uid
+        loadPeopleList()
+        chatbotBtn.addTarget(self, action: #selector(moveChatbot), for: .touchUpInside)
+    }
+    
     //테이블뷰 갯수 (Datasource)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -32,21 +41,13 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //테이블뷰 셀 지정(Datasource)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as! PersonCell
-        let item = self.array[indexPath.row]
-        cell.name.text = item.StudentID
-        
-        
-        
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as! PersonCell
+            let item = self.array[indexPath.row]
+            cell.name.text = item.StudentID
+            return cell
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        myUid = Auth.auth().currentUser?.uid
-        loadPeopleList()
-    }
-//    굳이 따로 관리자를 유저목록에서 검색하는 이유는 보안때문
+   
+
     func loadPeopleList(){
         Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
             self.array.removeAll()
@@ -54,9 +55,9 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let fchild = child as! DataSnapshot
                 let dic = fchild.value as! [String : Any]
                 let userModel = UserModel(JSON: dic)
-                if(userModel?.StudentID == "관리자")
-                {
-                self.array.append(userModel!)
+                if(userModel?.StudentID == "관리자"){
+                    self.array.append(userModel!)
+                    print(self.array.count)
                 }
             }
             DispatchQueue.main.async {
@@ -86,7 +87,6 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         ////내가 선택한 사람의 방이 존재할때
                             self.chatRoomUid = item.key
                             self.performSegue(withIdentifier: "QuestionChatSegue", sender: nil)
-                            
                             break
                         }
                 }
@@ -110,11 +110,12 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo, withCompletionBlock: { (err, ref) in
             self.chatRoomUid = ref.key
             self.performSegue(withIdentifier: "QuestionChatSegue", sender: nil)
-            
         })
-        
     }
-
+    
+    @objc func moveChatbot(){
+        performSegue(withIdentifier: "chatbotSegue", sender: nil)
+    }
 
 
 
@@ -133,11 +134,4 @@ class PersonCell :UITableViewCell{
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var name: UILabel!
 }
-// 채팅방은 만드는게 맞음. 채팅방생성을 해주는데. 그게 관리자랑의 채팅방만 생기면됨. 굳이 데이베이스로 딴사람데이터 읽어올 필요가 없음
-//QuestionViewController로 이동하면 됨.
-//상대가 관리자랑의 채팅방만 잇으면된다.
-//애초에 내가 채팅방 uid를 지정해놓고 거기로들어가면된다.
-//먼저 내가 소속된 방들을 검색
-//queryordered는 users/myuid로 결과를 정렬
-//queryEqual은 값 == tovalue의 값 인 결과를 반환해줌.
 
