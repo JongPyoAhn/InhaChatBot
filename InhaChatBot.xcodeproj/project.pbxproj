@@ -143,9 +143,49 @@
 		53A6598726537E3000D04941 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
-				53A6598826537FA200D04941 /* File.swift */,
+				53A6598F2653800900D04941 /* Section_1 */,
+				53A659922653800900D04941 /* Section_2 */,
+				53A659932653800900D04941 /* Section_3 */,
+				53A659912653800900D04941 /* Section_4 */,
+				53A659902653800900D04941 /* Section_5 */,
 			);
 			path = Guide;
+			sourceTree = "<group>";
+		};
+		53A6598F2653800900D04941 /* Section_1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Section_1;
+			sourceTree = "<group>";
+		};
+		53A659902653800900D04941 /* Section_5 */ = {
+			isa = PBXGroup;
+			children = (
+				53A6598826537FA200D04941 /* File.swift */,
+			);
+			path = Section_5;
+			sourceTree = "<group>";
+		};
+		53A659912653800900D04941 /* Section_4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Section_4;
+			sourceTree = "<group>";
+		};
+		53A659922653800900D04941 /* Section_2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Section_2;
+			sourceTree = "<group>";
+		};
+		53A659932653800900D04941 /* Section_3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Section_3;
 			sourceTree = "<group>";
 		};
 		E2B3592EE400DFD266D8C456 /* Pods */ = {
