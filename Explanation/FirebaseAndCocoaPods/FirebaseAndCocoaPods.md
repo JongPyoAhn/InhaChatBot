@@ -20,7 +20,7 @@ Android, IOS, Node.js, Java, Unity 다양한 플렛폼 지원
 ### 파이어베이스 연동 및 인증 라이브러리 설치
 1. 터미널을 켜고 cd 명령어를 이용하여 자신의 프로젝트 폴더로 이동한 후
 2. 아래와 같이 터미널에 입력한다.
-''' pod init '''
+'''bash pod init '''
 
 3. 아래의 명령어를 사용하면 pod파일이 열린다.
 '''open podfile '''
