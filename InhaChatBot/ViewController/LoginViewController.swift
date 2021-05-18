@@ -15,22 +15,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signinBtn: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         signinBtn.addTarget(self, action: #selector(signinDisplay), for: .touchUpInside)
         loginBtn.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
     }
     
-        //SignIn화면으로 전환
-        @objc func signinDisplay(){
-            self.performSegue(withIdentifier: "signSegue", sender: nil)
-        }
+    //SignIn화면으로 전환
+    @objc func signinDisplay(){
+        self.performSegue(withIdentifier: "signSegue", sender: nil)
+    }
     
-//    로그인 버튼 클릭시 발생
+    //로그인 버튼 클릭시 발생
     @objc func loginEvent(){
         Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {
             (user, err) in
