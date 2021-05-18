@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+
 class LoginViewController: UIViewController {
    
     @IBOutlet weak var emailText: UITextField!
@@ -15,8 +16,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signinBtn: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         signinBtn.addTarget(self, action: #selector(signinDisplay), for: .touchUpInside)
         loginBtn.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
@@ -39,5 +42,11 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "MainSegue", sender: nil )
             }
         }
+    }
+    
+    // 화면 터치 시 키보드 내리기 ( 뷰 컨트롤러에 터치가 시작되는 시점에 동작 )
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.emailText.resignFirstResponder()
+        self.pwText.resignFirstResponder()
     }
 }
