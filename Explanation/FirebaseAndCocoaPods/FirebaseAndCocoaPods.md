@@ -15,15 +15,18 @@ Android, IOS, Node.js, Java, Unity 다양한 플렛폼 지원
 ## CocoaPods 란?
  Xcode Dependency(라이브러리) Manager이다 애플에서 정식으로 만든 프로그램은 아니며 Third Party(다른 사용자) 프로그램이다. 라이브러리를 관리할때 Xcode 사용자들이 가장 많이 쓰는 프로그램이기도 하다.
 - Cocoapod 설치 Terminal을 켜서 Cocoapod를 설치하자.
-```bash sudo gem install cocoapods```
+```bash
+sudo gem install cocoapods```
 
 ### 파이어베이스 연동 및 인증 라이브러리 설치
 1. 터미널을 켜고 cd 명령어를 이용하여 자신의 프로젝트 폴더로 이동한 후
 2. 아래와 같이 터미널에 입력한다.
-```bash pod init```
+```bash
+pod init```
 
 3. 아래의 명령어를 사용하면 pod파일이 열린다.
-```bash open podfile```
+```bash
+open podfile```
 
 4. pod 파일에 아래와같이 pod을 추가해준다.
 ```bash
@@ -42,7 +45,8 @@ end
 ```
 
 5. pod목록에 있는 라이브러리 설치(마찬가지로 터미널에 입력)
-```bash pod install```
+```bash
+pod install```
 
 6. 프로젝트 폴더에 들어가보면 프로젝트명.xcworkspace가 있을것이다. 이 파일로 작업하면된다.
 
