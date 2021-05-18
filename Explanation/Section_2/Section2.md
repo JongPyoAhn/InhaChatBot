@@ -9,7 +9,8 @@
 쓰기 작업의 경우에는 setValue를 사용하여 지정된 참조에 데이터를 저장하고 기존 경로의 모든 데이터를 대체할 수 있습니다.
 JSON 유형에 해당하는 Map(Dictionary)방식으로 전달 하였습니다.
 
-``` Auth.auth().createUser(withEmail: email, password: password) {
+``` 
+ Auth.auth().createUser(withEmail: email, password: password) {
                 (user, err) in
                 let uid = user?.user.uid
             
@@ -17,7 +18,7 @@ JSON 유형에 해당하는 Map(Dictionary)방식으로 전달 하였습니다.
                 var userModel = UserModel()
                 userModel.StudentID = self.numofSchoolText.text
                 userModel.uid = Auth.auth().currentUser?.uid
-                }
+            
                 //데이터베이스에 유저정보 입력
                 Database.database().reference().child("users").child(uid!).setValue(userModel.toJSON(), withCompletionBlock: { (err, ref) in
                     if(err == nil){
@@ -28,5 +29,6 @@ JSON 유형에 해당하는 Map(Dictionary)방식으로 전달 하였습니다.
                         self.present(alert, animated: true, completion: nil)
                 }
             })
+        }
  ```           
 
