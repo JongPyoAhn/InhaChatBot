@@ -31,5 +31,5 @@ JSON 유형에 해당하는 Map(Dictionary)방식으로 전달 하였습니다.
             })
         }
  ```           
-![](./InhaChatBot/Explanation/Section_2/스크린샷 2021-05-19 오전 12.33.45.png)
+![스크린샷 2021-05-19 오전 12 33 45](https://user-images.githubusercontent.com/68585628/118682805-ba1d5d80-b83b-11eb-9ae5-9d155b426b8e.png)
 
