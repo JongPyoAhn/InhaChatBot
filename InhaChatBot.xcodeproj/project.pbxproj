@@ -23,6 +23,7 @@
 		5353E5632644097100CD35B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5612644097100CD35B3 /* Main.storyboard */; };
 		5353E5652644097200CD35B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5642644097200CD35B3 /* Assets.xcassets */; };
 		5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5662644097200CD35B3 /* LaunchScreen.storyboard */; };
+		53A6598926537FA200D04941 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6598826537FA200D04941 /* File.swift */; };
 		53F96E7F264CFE1800B06DFA /* AssistantMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */; };
 		53F96E81264CFF7E00B06DFA /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */; };
 		53F96E83264D074400B06DFA /* AssistantError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E82264D074400B06DFA /* AssistantError.swift */; };
@@ -49,6 +50,7 @@
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5353E5692644097200CD35B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A6598826537FA200D04941 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantMessages.swift; sourceTree = "<group>"; };
 		53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BMSCredentials.plist; sourceTree = "<group>"; };
 		53F96E82264D074400B06DFA /* AssistantError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantError.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		53A6598726537E3000D04941 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				53A6598826537FA200D04941 /* File.swift */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				533B00922644307800381F22 /* SignInViewController.swift in Sources */,
 				533B00D126463F0C00381F22 /* PeopleViewController.swift in Sources */,
 				533B00D72647AB4C00381F22 /* Util.swift in Sources */,
+				53A6598926537FA200D04941 /* File.swift in Sources */,
 				5353E55E2644097100CD35B3 /* SceneDelegate.swift in Sources */,
 				533B009D26451BEF00381F22 /* AccountViewController.swift in Sources */,
 				533B00D326463F3800381F22 /* UserModel.swift in Sources */,
