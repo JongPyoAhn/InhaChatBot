@@ -26,23 +26,20 @@ Android, IOS, Node.js, Java, Unity 다양한 플렛폼 지원
 '''open podfile '''
 
 4. pod 파일에 아래와같이 pod을 추가해준다.
-'''target 'HowlTalk' do
+```bash
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'InhaChatBot' do 
+ # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
-#파이어베이스 인증, 데이터베이스 라이브러리 추가
-  pod 'Firebase/Auth'
-  pod 'FIrebase/Database'
-  
-  target 'HowlTalkTests' do
-    inherit! :search_paths
+  # Pods for InhaChatBot
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
 
-  end
 
-  target 'HowlTalkUITests' do
-    # Pods for testing
-  end
-
-end'''
+end
+```
 
 5. pod목록에 있는 라이브러리 설치(마찬가지로 터미널에 입력)
 '''pod install'''
