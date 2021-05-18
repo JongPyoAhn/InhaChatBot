@@ -49,11 +49,12 @@
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5353E5692644097200CD35B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53A659942653812800D04941 /* Section2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section2.md; sourceTree = "<group>"; };
+		53A659942653812800D04941 /* FirebaseAndCocoaPods.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FirebaseAndCocoaPods.md; sourceTree = "<group>"; };
 		53A659952653815000D04941 /* Section1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section1.md; sourceTree = "<group>"; };
 		53A659962653815E00D04941 /* Section3.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section3.md; sourceTree = "<group>"; };
 		53A659972653816800D04941 /* Section4.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section4.md; sourceTree = "<group>"; };
 		53A659982653817400D04941 /* Section5.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section5.md; sourceTree = "<group>"; };
+		53E718252653A80700F7BBB5 /* Section2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section2.md; sourceTree = "<group>"; };
 		53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantMessages.swift; sourceTree = "<group>"; };
 		53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BMSCredentials.plist; sourceTree = "<group>"; };
 		53F96E82264D074400B06DFA /* AssistantError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantError.swift; sourceTree = "<group>"; };
@@ -108,7 +109,7 @@
 		5353E54F2644097100CD35B3 = {
 			isa = PBXGroup;
 			children = (
-				53A6598726537E3000D04941 /* Guide */,
+				53A6598726537E3000D04941 /* Explanation */,
 				5353E55A2644097100CD35B3 /* InhaChatBot */,
 				5353E5592644097100CD35B3 /* Products */,
 				E2B3592EE400DFD266D8C456 /* Pods */,
@@ -143,16 +144,17 @@
 			path = InhaChatBot;
 			sourceTree = "<group>";
 		};
-		53A6598726537E3000D04941 /* Guide */ = {
+		53A6598726537E3000D04941 /* Explanation */ = {
 			isa = PBXGroup;
 			children = (
+				53E718242653A7ED00F7BBB5 /* FirebaseAndCocoaPods */,
 				53A6598F2653800900D04941 /* Section_1 */,
 				53A659922653800900D04941 /* Section_2 */,
 				53A659932653800900D04941 /* Section_3 */,
 				53A659912653800900D04941 /* Section_4 */,
 				53A659902653800900D04941 /* Section_5 */,
 			);
-			path = Guide;
+			path = Explanation;
 			sourceTree = "<group>";
 		};
 		53A6598F2653800900D04941 /* Section_1 */ = {
@@ -182,7 +184,7 @@
 		53A659922653800900D04941 /* Section_2 */ = {
 			isa = PBXGroup;
 			children = (
-				53A659942653812800D04941 /* Section2.md */,
+				53E718252653A80700F7BBB5 /* Section2.md */,
 			);
 			path = Section_2;
 			sourceTree = "<group>";
@@ -193,6 +195,14 @@
 				53A659962653815E00D04941 /* Section3.md */,
 			);
 			path = Section_3;
+			sourceTree = "<group>";
+		};
+		53E718242653A7ED00F7BBB5 /* FirebaseAndCocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				53A659942653812800D04941 /* FirebaseAndCocoaPods.md */,
+			);
+			path = FirebaseAndCocoaPods;
 			sourceTree = "<group>";
 		};
 		E2B3592EE400DFD266D8C456 /* Pods */ = {
