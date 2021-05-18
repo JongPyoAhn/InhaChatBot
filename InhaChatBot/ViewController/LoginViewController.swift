@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+
     // 화면 터치 시 키보드 내리기 ( 뷰 컨트롤러에 터치가 시작되는 시점에 동작 )
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.emailText.resignFirstResponder()
