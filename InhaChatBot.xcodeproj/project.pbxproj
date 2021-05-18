@@ -103,6 +103,7 @@
 		5353E54F2644097100CD35B3 = {
 			isa = PBXGroup;
 			children = (
+				53A6598726537E3000D04941 /* Guide */,
 				5353E55A2644097100CD35B3 /* InhaChatBot */,
 				5353E5592644097100CD35B3 /* Products */,
 				E2B3592EE400DFD266D8C456 /* Pods */,
@@ -135,6 +136,13 @@
 				533B008B26440C8F00381F22 /* GoogleService-Info.plist */,
 			);
 			path = InhaChatBot;
+			sourceTree = "<group>";
+		};
+		53A6598726537E3000D04941 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guide;
 			sourceTree = "<group>";
 		};
 		E2B3592EE400DFD266D8C456 /* Pods */ = {
