@@ -11,7 +11,6 @@ import ObjectMapper
 struct UserModel: Mappable{
     
     var uid : String?
-//    var pushToken :String?
     var StudentID : String?
     init() {}
     init?(map: Map) {}

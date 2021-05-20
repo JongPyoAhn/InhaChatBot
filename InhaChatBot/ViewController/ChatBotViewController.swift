@@ -55,13 +55,9 @@ class ChatBotViewController: MessagesViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didBecomeActive),
                                                name: Notification.Name("didBecomeActiveNotification"),
-                                               object: nil)
-
-     
-        
-        
+                                               object: nil)   
     }
-  
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

@@ -25,8 +25,6 @@ class AccountViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
         bringEmail()
         bringstudentID()
         logoutBtn.addTarget(self, action: #selector(logoutEvent), for: .touchUpInside)
@@ -75,6 +73,10 @@ class AccountViewController: UIViewController{
         self.dismiss(animated: true, completion: nil)
     }
         
+    // 화면 터치 시 키보드 내리기 ( 뷰 컨트롤러에 터치가 시작되는 시점에 동작 )
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.passwordText.resignFirstResponder()
+    }
 }
 
 

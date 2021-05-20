@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-class QuestionViewController:  UIViewController,UITableViewDelegate,UITableViewDataSource {
+class QuestionViewController:  UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
     let mymessage = MyMessageCell()
     
@@ -31,6 +31,8 @@ class QuestionViewController:  UIViewController,UITableViewDelegate,UITableViewD
     @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfield_message.delegate = self
+        addKeyboardNotification()
         tableview.separatorStyle = UITableViewCell.SeparatorStyle.none
         getDestinationUserInfo()
         
@@ -96,8 +98,43 @@ class QuestionViewController:  UIViewController,UITableViewDelegate,UITableViewD
             
         }
     }
+    
+    //MARK: - 메시지텍스트필드가 있는 view가 올라가고 내려가는 메서드
+    private func addKeyboardNotification() {
+        NotificationCenter.default.addObserver(
+          self,
+          selector: #selector(keyboardWillShow),
+          name: UIResponder.keyboardWillShowNotification,
+          object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+          self,
+          selector: #selector(keyboardWillHide),
+          name: UIResponder.keyboardWillHideNotification,
+          object: nil
+        )
+      }
+    @objc private func keyboardWillShow(_ notification: Notification) {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//        let keybaordRectangle = keyboardFrame.cgRectValue
+//        let keyboardHeight = keybaordRectangle.height
+        self.view.frame.origin.y -= 217
+      }
+    }
+    @objc private func keyboardWillHide(_ notification: Notification) {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//        let keybaordRectangle = keyboardFrame.cgRectValue
+//        let keyboardHeight = keybaordRectangle.height
+        self.view.frame.origin.y += 217
+      }
+    }
+    
+    
+    
+    
 }
-
+//MARK: - class
 class MyMessageCell :UITableViewCell{
     @IBOutlet weak var label_message: UILabel!
     @IBOutlet weak var label_timestamp: UILabel!

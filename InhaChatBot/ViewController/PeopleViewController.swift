@@ -33,7 +33,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         loadPeopleList()
         chatbotBtn.addTarget(self, action: #selector(moveChatbot), for: .touchUpInside)
     }
-    
+    //MARK: -Protocol(tableView)
     //테이블뷰 갯수 (Datasource)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -46,30 +46,9 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.name.text = item.StudentID
             return cell
     }
-   
-
-    func loadPeopleList(){
-        Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
-            self.array.removeAll()
-            for child in snapshot.children{ //snapshot.children = 등록된 사용자 목록(user바로아래 값들)
-                let fchild = child as! DataSnapshot
-                let dic = fchild.value as! [String : Any]
-                let userModel = UserModel(JSON: dic)
-                if(userModel?.StudentID == "관리자"){
-                    self.array.append(userModel!)
-                    print(self.array.count)
-                }
-            }
-            DispatchQueue.main.async {
-                self.tableview.reloadData()
-            }
-        })
-    }
     
     //테이블뷰 선택 이벤트(Delegate)
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //한마디로 users/myuid에서 true값인 것을 반환해준다는것.
-            //observeSingleEvent는 그냥 데이터한번 읽는거임.
             //내가 소속된 방 검색
             destinationUid = self.array[indexPath.row].uid
             Database.database().reference().child("chatrooms").queryOrdered(byChild: "users/"+myUid!).queryEqual(toValue: true).observeSingleEvent(of: DataEventType.value,with: {
@@ -98,6 +77,25 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             })
     }
+    //MARK: - 친구목록생성 Function
+    func loadPeopleList(){
+        Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
+            self.array.removeAll()
+            for child in snapshot.children{ //snapshot.children = 등록된 사용자 목록(user바로아래 값들)
+                let fchild = child as! DataSnapshot
+                let dic = fchild.value as! [String : Any]
+                let userModel = UserModel(JSON: dic)
+                if(userModel?.StudentID == "관리자"){
+                    self.array.append(userModel!)
+                    print(self.array.count)
+                }
+            }
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
+            }
+        })
+    }
+   
     
     // 방 생성 코드
     func createRoom(uid : String, destinationUid : String){
@@ -112,15 +110,13 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.performSegue(withIdentifier: "QuestionChatSegue", sender: nil)
         })
     }
-    
+    //MARK: -Segue
+    // 챗봇페이지로 이동
     @objc func moveChatbot(){
         performSegue(withIdentifier: "chatbotSegue", sender: nil)
     }
-
-
-
+ //QuestionView로 이동시 값 전달
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
     if(segue.identifier == "QuestionChatSegue"){
         let vc = segue.destination as? QuestionViewController
         vc?.chatRoomUid = chatRoomUid
@@ -129,7 +125,8 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
  }
 }
-    
+
+//customCell
 class PersonCell :UITableViewCell{
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var name: UILabel!
