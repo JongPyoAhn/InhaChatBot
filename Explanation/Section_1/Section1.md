@@ -2,6 +2,7 @@
 ## 인증(Authorization)라이브러리 사용
 
 1. 이메일 로그인 로직을 만들기 위해서는 Auth Dependencies에 signIn Function을 사용하면 된다.
+- [Firebase Document](https://firebase.google.com/docs/auth/ios/start)
 ```  
 Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {  (user, err) in }
 ```
@@ -22,6 +23,8 @@ Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {
 ```
 
 3. 화면 터치시 키보드 내리기
+- touchesBegan() => view에 터치가 발생했음을 알려주는 콜백메소드
+- resignFirstResponder() => 선택항목을 포기(?)할 수 있게 해주는 메소드 (키보드가 내려가는 메소드)
 ```
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.emailText.resignFirstResponder()
