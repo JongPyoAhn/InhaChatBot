@@ -4,7 +4,7 @@
 - 정보를 저장할 수 있는 데이터베이스 사용
 - 데이터베이스 연동으로 친구목록 읽어오기
 - 데이터베이스 연동으로 메세지 전송
-## [Section 1] FireBase를 이용한 로그인
+## [Section 1] [FireBase를 이용한 로그인](https://github.com/JongPyoAhn/InhaChatBot/blob/main/Explanation/Section_1/Section1.md)
 - 저장된 인증정보를 이용한 로그인
 ## [Section 2] [FireBase를 이용한 회원가입](https://github.com/JongPyoAhn/InhaChatBot/blob/main/Explanation/Section_2/Section2.md)
 - 새로운 유저 인증정보 생성
