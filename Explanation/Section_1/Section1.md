@@ -1,8 +1,8 @@
 #  FireBase를 이용한 로그인
 ## 인증(Authorization)라이브러리 사용
 
-1. 이메일 로그인 로직을 만들기 위해서는 Auth Dependencies에 signIn Function을 사용하면 된다.
-- [Ios Auth Firebase Document](https://firebase.google.com/docs/auth/ios/start)
+1. 이메일 로그인 로직을 만들기 위해서는 Auth Dependencies에 [signIn Function](https://firebase.google.com/docs/auth/ios/start)을 사용하면 된다.
+
 ```  
 Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {  (user, err) in }
 ```
