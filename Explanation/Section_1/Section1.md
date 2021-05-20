@@ -20,3 +20,11 @@ Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {
         }
 
 ```
+
+3. 화면 터치시 키보드 내리기
+```
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.emailText.resignFirstResponder()
+        self.pwText.resignFirstResponder()
+    }
+```
