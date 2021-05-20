@@ -6,7 +6,7 @@
 - 데이터베이스 연동으로 메세지 전송
 ## [Section 1] FireBase를 이용한 로그인
 - 저장된 인증정보를 이용한 로그인
-## [Section 2] FireBase를 이용한 회원가입
+## [Section 2] [FireBase를 이용한 회원가입](https://github.com/JongPyoAhn/InhaChatBot/blob/main/Explanation/Section_2/Section2.md).
 - 새로운 유저 인증정보 생성
 - 매핑하여 FireBase 데이터베이스에 저장
 ## [Section 3] 채팅 목록
