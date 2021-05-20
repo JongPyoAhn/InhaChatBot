@@ -4,7 +4,7 @@
 
 1. 이메일 회원가입 코드 회원가입 로직을 만들기 위해서는 Auth Dependencies에 createUser Function을 사용하면 된다. (아이디는 이메일, 비밀번호는 6자리 이상 필수)
 
-```bash Auth.auth().createUser(withEmail: email, password: password) (user, err) in } ```
+``` Auth.auth().createUser(withEmail: email, password: password) (user, err) in } ```
 
 2. 데이터베이스 쓰기
 쓰기 작업의 경우에는 setValue를 사용하여 지정된 참조에 데이터를 저장하고 기존 경로의 모든 데이터를 대체할 수 있습니다.
