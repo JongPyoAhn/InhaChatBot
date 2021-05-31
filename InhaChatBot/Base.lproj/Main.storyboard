@@ -144,6 +144,9 @@
                         <viewLayoutGuide key="safeArea" id="Lfg-4P-EYW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="6Jc-wM-OJp">
+                        <barButtonItem key="backBarButtonItem" title="목록" id="RUA-M3-4JX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxe-zj-0yj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,12 +229,12 @@
                         <outlet property="chatbotBtn" destination="01U-Da-mdF" id="vgE-UZ-3hm"/>
                         <outlet property="tableview" destination="xb9-yo-ewr" id="vTV-Ps-ayv"/>
                         <segue destination="FY4-ka-APu" kind="push" identifier="QuestionChatSegue" id="bad-0G-qa1"/>
-                        <segue destination="d9J-s7-6bm" kind="presentation" identifier="chatbotSegue" modalPresentationStyle="fullScreen" id="ud3-qw-pja"/>
+                        <segue destination="d9J-s7-6bm" kind="push" identifier="chatbotSegue" id="Iax-zg-0KY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDE-UF-I7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3660.8695652173915" y="135.9375"/>
+            <point key="canvasLocation" x="3661" y="136"/>
         </scene>
         <!--Chat-->
         <scene sceneID="tr4-px-j2g">
