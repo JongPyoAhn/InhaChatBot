@@ -770,7 +770,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="InhaLogo" width="224" height="224"/>
+        <image name="InhaLogo" width="112" height="112"/>
         <image name="account" width="18" height="18"/>
         <image name="chatbot" width="18" height="18"/>
         <image name="message_blue" width="11.5" height="9"/>

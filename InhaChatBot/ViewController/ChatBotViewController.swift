@@ -11,9 +11,13 @@ import Assistant
 import MessageKit
 import MapKit
 import BMSCore
+import Firebase
 //, NVActivityIndicatorViewable
 class ChatBotViewController: MessagesViewController {
 
+    var studentID: String?
+    var uid: String?
+    
     fileprivate let kCollectionViewCellHeight: CGFloat = 12.5
 
     // Messages State
@@ -30,8 +34,8 @@ class ChatBotViewController: MessagesViewController {
 
     // Users의 정보 저장하는곳
     // 파이어베이스에서 갖고와야됨 id랑 이름
-    var current = Sender(id: "로그인한학번", displayName: "사람")
-    let watson = Sender(id: "그냥왓슨", displayName: "왓슨")
+    var current = Sender(id: "로그인한학번", displayName: "학생")
+    let watson = Sender(id: "그냥왓슨", displayName: "인하공전 길라잡이")
 
     
 
@@ -58,6 +62,23 @@ class ChatBotViewController: MessagesViewController {
                                                object: nil)   
     }
     
+//    //현재 접속한 사용자의 학번 리턴
+//    func returnstudentID() {
+//        let refStudentID = Database.database().reference().child("users")
+//        refStudentID.observeSingleEvent(of: DataEventType.value, with: {
+//            (snapshot) in
+//            for child in snapshot.children{
+//                let fchild = child as! DataSnapshot
+//                let dic = fchild.value as! [String : Any]
+//                let userModel = UserModel(JSON: dic)
+//                // snapshot을 이용해서 파베에 저장된 모든 유저 데이터(snapshot)중 현재 사용자 uid랑 같은 studentID 구하기
+//                if(userModel?.uid == self.uid){
+//                    self.studentID = userModel?.StudentID
+//                }
+//            }
+//        })
+//    }
+    //MARK: -
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -75,6 +96,8 @@ class ChatBotViewController: MessagesViewController {
         
         
     }
+    
+    
 
     // MARK: - Setup Methods
 

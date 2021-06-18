@@ -63,12 +63,20 @@ class AccountViewController: UIViewController{
         })
     }
     @objc func changePW(){
-        Auth.auth().currentUser?.updatePassword(to: passwordText.text!) { (error) in
+        Auth.auth().currentUser?.updatePassword(to: passwordText.text!) {
+            (error) in
             if let error = error {
                 print(error)
+            }else{
+                let alert = UIAlertController(title: "비밀번호변경", message: "비밀번호 변경이 완료되었습니다!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
-            }
+        }
     }
+    
     @objc func logoutEvent(){
         self.dismiss(animated: true, completion: nil)
     }
