@@ -540,7 +540,6 @@
                                 <state key="normal" title="확인"/>
                                 <connections>
                                     <action selector="confirmButtonTabbed:" destination="fOq-vF-IHl" eventType="touchUpInside" id="mP9-SC-Zzj"/>
-                                    <action selector="confirmEvent:" destination="fOq-vF-IHl" eventType="touchUpInside" id="Cla-kr-tdS"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="학번" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnL-Gy-IF9" customClass="HoshiTextField" customModule="TextFieldEffects">
@@ -567,8 +566,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxf-xL-e6I">
-                                <rect key="frame" x="255" y="711" width="102" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxf-xL-e6I">
+                                <rect key="frame" x="57" y="622" width="300" height="34"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="CA6-bH-Qpx"/>
