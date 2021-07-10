@@ -28,8 +28,6 @@ class PeopleViewController: UIViewController{
         myUid = Auth.auth().currentUser?.uid
         loadPeopleList()
     }
-    
-   
 }
     
 extension PeopleViewController{

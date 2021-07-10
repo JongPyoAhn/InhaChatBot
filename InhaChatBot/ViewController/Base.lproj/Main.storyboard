@@ -388,6 +388,9 @@
                                         <state key="normal" title="전송">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendButtonTabbed:" destination="FY4-ka-APu" eventType="touchUpInside" id="5lA-oH-3wr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
