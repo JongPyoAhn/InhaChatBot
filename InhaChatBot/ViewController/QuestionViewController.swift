@@ -81,7 +81,6 @@ extension QuestionViewController {
             }
         })
     }
-    
     //키보드 컨트롤
     @objc private func adjustInputView(noti: Notification) {
             guard let userInfo = noti.userInfo else { return }
@@ -93,9 +92,7 @@ extension QuestionViewController {
                 inputViewBottom.constant = 0
             }
         }
-    
 }
-
 //MARK: - DataSource
 extension QuestionViewController: UITableViewDataSource {
     //테이블뷰 갯수
@@ -111,14 +108,12 @@ extension QuestionViewController: UITableViewDataSource {
             view.label_message.text = self.comments[indexPath.row].message
             view.label_timestamp.text = self.comments[indexPath.row].timestamp?.toDayTime
             return view
-            
         }else{
             let view = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
             view.label_name.text = userModel?.StudentID
             view.label_message.text = self.comments[indexPath.row].message
             view.label_timestamp.text = self.comments[indexPath.row].timestamp?.toDayTime
             return view
-            
         }
     }
 }

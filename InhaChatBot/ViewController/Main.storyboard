@@ -539,6 +539,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="확인"/>
                                 <connections>
+                                    <action selector="confirmButtonTabbed:" destination="fOq-vF-IHl" eventType="touchUpInside" id="mP9-SC-Zzj"/>
                                     <action selector="confirmEvent:" destination="fOq-vF-IHl" eventType="touchUpInside" id="Cla-kr-tdS"/>
                                 </connections>
                             </button>
@@ -579,10 +580,14 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logoutButtonTabbed:" destination="fOq-vF-IHl" eventType="touchUpInside" id="iyG-fj-Pqi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c4l-8q-7WU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="c4l-8q-7WU" firstAttribute="trailing" secondItem="Uxf-xL-e6I" secondAttribute="trailing" constant="57" id="5oF-ah-opI"/>
                             <constraint firstItem="29A-uJ-hkJ" firstAttribute="leading" secondItem="c4l-8q-7WU" secondAttribute="leading" constant="124" id="609-a7-1nv"/>
@@ -605,17 +610,25 @@
                             <constraint firstItem="S4S-Ne-cE0" firstAttribute="top" secondItem="29A-uJ-hkJ" secondAttribute="bottom" constant="62" id="xx0-0j-Ph1"/>
                             <constraint firstItem="c4l-8q-7WU" firstAttribute="trailing" secondItem="OnL-Gy-IF9" secondAttribute="trailing" constant="57" id="yBd-4D-Zgz"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2Me-qm-B7a" appends="YES" id="JcM-sQ-U4V"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="STT-yf-DuM"/>
                     <connections>
                         <outlet property="StudentIDText" destination="OnL-Gy-IF9" id="hAr-si-UZb"/>
-                        <outlet property="confirmBtn" destination="ov4-6X-7Ip" id="tj6-Ce-sYX"/>
+                        <outlet property="confirmButton" destination="ov4-6X-7Ip" id="qOR-hP-sxj"/>
                         <outlet property="emailText" destination="S4S-Ne-cE0" id="uZk-py-Xb7"/>
-                        <outlet property="logoutBtn" destination="Uxf-xL-e6I" id="EAX-mX-gyn"/>
+                        <outlet property="logoutButton" destination="Uxf-xL-e6I" id="Ey2-UF-uDz"/>
                         <outlet property="passwordText" destination="NvZ-hC-LfX" id="tXq-zg-vSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glF-Bl-SiR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2Me-qm-B7a">
+                    <connections>
+                        <action selector="TabBG:" destination="fOq-vF-IHl" id="svx-GH-ezW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2811.594202898551" y="843.75"/>
         </scene>

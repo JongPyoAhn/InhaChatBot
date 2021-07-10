@@ -19,32 +19,51 @@ class AccountViewController: UIViewController{
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var StudentIDText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-    @IBOutlet weak var confirmBtn: UIButton!
-    @IBOutlet weak var logoutBtn: UIButton!
-    
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bringEmail()
         bringstudentID()
-        logoutBtn.addTarget(self, action: #selector(logoutEvent), for: .touchUpInside)
-        confirmBtn.addTarget(self, action: #selector(changePW), for: .touchUpInside)
-        
     }
     
+    @IBAction func confirmButtonTabbed(_ sender: Any) {
+        Auth.auth().currentUser?.updatePassword(to: passwordText.text!) {
+            (error) in
+            if let error = error {
+                print(error)
+            }else{
+                let alert = UIAlertController(title: "비밀번호변경", message: "비밀번호 변경이 완료되었습니다!", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func logoutButtonTabbed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //키보드 내리기
+    @IBAction func TabBG(_ sender: Any){
+        passwordText.resignFirstResponder()
+    }
+}
+
+extension AccountViewController {
     //현재 접속한 사용자의 email정보 가져오기
     func bringEmail(){
         let user = Auth.auth().currentUser
         if let user = user {
             email = user.email
             uid = user.uid
-            
             emailText.text = email
         }
     }
-    
-    @IBAction func confirmEvent(_ sender: UIButton) {
-    }
+   
     //현재 접속한 사용자의 학번 가져오기
     func bringstudentID(){
         let refStudentID = Database.database().reference().child("users")
@@ -62,31 +81,4 @@ class AccountViewController: UIViewController{
             }
         })
     }
-    @objc func changePW(){
-        Auth.auth().currentUser?.updatePassword(to: passwordText.text!) {
-            (error) in
-            if let error = error {
-                print(error)
-            }else{
-                let alert = UIAlertController(title: "비밀번호변경", message: "비밀번호 변경이 완료되었습니다!", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
-                    self.dismiss(animated: true, completion: nil)
-                }))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
-    
-    @objc func logoutEvent(){
-        self.dismiss(animated: true, completion: nil)
-    }
-        
-    // 화면 터치 시 키보드 내리기 ( 뷰 컨트롤러에 터치가 시작되는 시점에 동작 )
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.passwordText.resignFirstResponder()
-    }
 }
-
-
-
-// 다음할일 확인버튼에 이벤트넣기
