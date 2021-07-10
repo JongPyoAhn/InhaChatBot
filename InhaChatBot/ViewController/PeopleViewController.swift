@@ -28,58 +28,12 @@ class PeopleViewController: UIViewController{
         myUid = Auth.auth().currentUser?.uid
         loadPeopleList()
     }
-}
     
-extension PeopleViewController{
     @IBAction func chatbotButtonTabbed(_ sender: Any) {
         performSegue(withIdentifier: "chatbotSegue", sender: nil)
     }
-    
-    //친구목록 생성
-    func loadPeopleList(){
-        Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
-            self.array.removeAll()
-            for child in snapshot.children{ //snapshot.children = 등록된 사용자 목록(user바로아래 값들)
-                let fchild = child as! DataSnapshot
-                let dic = fchild.value as! [String : Any]
-                let userModel = UserModel(JSON: dic)
-                if(userModel?.StudentID == "관리자"){
-                    self.array.append(userModel!)
-                    print(self.array.count)
-                }
-            }
-            DispatchQueue.main.async {
-                self.tableview.reloadData()
-            }
-        })
-    }
-    
-    // 방 생성 코드
-    func createRoom(uid : String, destinationUid : String){
-        let createRoomInfo : Dictionary<String,Any> = [ "users" : [
-            uid: true,
-            destinationUid :true
-            ]
-        ]
-        
-        Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo, withCompletionBlock: { (err, ref) in
-            self.chatRoomUid = ref.key
-            self.performSegue(withIdentifier: "QuestionChatSegue", sender: nil)
-        })
-    }
-    // 챗봇페이지로 이동
-   
- //QuestionView로 이동시 값 전달
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if(segue.identifier == "QuestionChatSegue"){
-        let vc = segue.destination as? QuestionViewController
-        vc?.chatRoomUid = chatRoomUid
-        vc?.myUid = myUid
-        vc?.destinationUid = destinationUid
-    }
- }
 }
-
+    
 extension PeopleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -123,6 +77,51 @@ extension PeopleViewController: UITableViewDelegate {
             }
             })
     }
+}
+
+extension PeopleViewController{
+    //친구목록 생성
+    func loadPeopleList(){
+        Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
+            self.array.removeAll()
+            for child in snapshot.children{ //snapshot.children = 등록된 사용자 목록(user바로아래 값들)
+                let fchild = child as! DataSnapshot
+                let dic = fchild.value as! [String : Any]
+                let userModel = UserModel(JSON: dic)
+                if(userModel?.StudentID == "관리자"){
+                    self.array.append(userModel!)
+                    print(self.array.count)
+                }
+            }
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
+            }
+        })
+    }
+    
+    // 방 생성 코드
+    func createRoom(uid : String, destinationUid : String){
+        let createRoomInfo : Dictionary<String,Any> = [ "users" : [
+            uid: true,
+            destinationUid :true
+            ]
+        ]
+        
+        Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo, withCompletionBlock: { (err, ref) in
+            self.chatRoomUid = ref.key
+            self.performSegue(withIdentifier: "QuestionChatSegue", sender: nil)
+        })
+    }
+   
+ //QuestionView로 이동시 값 전달
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if(segue.identifier == "QuestionChatSegue"){
+        let vc = segue.destination as? QuestionViewController
+        vc?.chatRoomUid = chatRoomUid
+        vc?.myUid = myUid
+        vc?.destinationUid = destinationUid
+    }
+ }
 }
 
 class PersonCell :UITableViewCell{

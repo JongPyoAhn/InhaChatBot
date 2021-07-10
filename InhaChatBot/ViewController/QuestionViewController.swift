@@ -53,9 +53,6 @@ class QuestionViewController:  UIViewController,UITextFieldDelegate {
     }
 }
 
-
-
-
 extension QuestionViewController {
     func getDestinationUserInfo(){
         Database.database().reference().child("users").child(self.destinationUid!).observeSingleEvent(of: DataEventType.value, with: { (datasnapshot) in
