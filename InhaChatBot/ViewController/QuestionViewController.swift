@@ -29,10 +29,14 @@ class QuestionViewController:  UIViewController,UITextFieldDelegate {
     @IBOutlet weak var textfield_message: UITextField!
     //채팅 메세지 전송 버튼
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var inputViewBottom: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         textfield_message.delegate = self
-//        addKeyboardNotification()
         tableview.separatorStyle = UITableViewCell.SeparatorStyle.none
         getDestinationUserInfo()
     }
@@ -47,43 +51,10 @@ class QuestionViewController:  UIViewController,UITextFieldDelegate {
             self.textfield_message.text = ""
         })
     }
-    
-    
-   
-    
-    
-    
-    //MARK: - 메시지텍스트필드가 있는 view가 올라가고 내려가는 메서드
-//    private func addKeyboardNotification() {
-//        NotificationCenter.default.addObserver(
-//          self,
-//          selector: #selector(keyboardWillShow),
-//          name: UIResponder.keyboardWillShowNotification,
-//          object: nil
-//        )
-//
-//        NotificationCenter.default.addObserver(
-//          self,
-//          selector: #selector(keyboardWillHide),
-//          name: UIResponder.keyboardWillHideNotification,
-//          object: nil
-//        )
-//      }
-//    @objc private func keyboardWillShow(_ notification: Notification) {
-//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-////        let keybaordRectangle = keyboardFrame.cgRectValue
-////        let keyboardHeight = keybaordRectangle.height
-//        self.view.frame.origin.y -= 217
-//      }
-//    }
-//    @objc private func keyboardWillHide(_ notification: Notification) {
-//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-////        let keybaordRectangle = keyboardFrame.cgRectValue
-////        let keyboardHeight = keybaordRectangle.height
-//        self.view.frame.origin.y += 217
-//      }
-//    }
 }
+
+
+
 
 extension QuestionViewController {
     func getDestinationUserInfo(){
@@ -110,9 +81,22 @@ extension QuestionViewController {
             }
         })
     }
+    
+    //키보드 컨트롤
+    @objc private func adjustInputView(noti: Notification) {
+            guard let userInfo = noti.userInfo else { return }
+            guard let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {return}
+            if noti.name == UIResponder.keyboardWillShowNotification {
+                let adjustmentHeight = keyboardFrame.height - view.safeAreaInsets.bottom
+                inputViewBottom.constant = adjustmentHeight
+            }else {
+                inputViewBottom.constant = 0
+            }
+        }
+    
 }
 
-
+//MARK: - DataSource
 extension QuestionViewController: UITableViewDataSource {
     //테이블뷰 갯수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -138,8 +122,6 @@ extension QuestionViewController: UITableViewDataSource {
         }
     }
 }
-
-
 
 //MARK: - class
 class MyMessageCell :UITableViewCell{

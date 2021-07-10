@@ -19,10 +19,10 @@
 		533B00D72647AB4C00381F22 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D62647AB4C00381F22 /* Util.swift */; };
 		5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55B2644097100CD35B3 /* AppDelegate.swift */; };
 		5353E55E2644097100CD35B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55D2644097100CD35B3 /* SceneDelegate.swift */; };
-		5353E5632644097100CD35B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5612644097100CD35B3 /* Main.storyboard */; };
 		5353E5652644097200CD35B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5642644097200CD35B3 /* Assets.xcassets */; };
 		5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5662644097200CD35B3 /* LaunchScreen.storyboard */; };
 		53548AD62654175600F9C137 /* 스크린샷 2021-05-19 오전 12.33.45.png in Resources */ = {isa = PBXBuildFile; fileRef = 53548AD52654175600F9C137 /* 스크린샷 2021-05-19 오전 12.33.45.png */; };
+		538896122699857900899216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538896112699857900899216 /* Main.storyboard */; };
 		53F96E7F264CFE1800B06DFA /* AssistantMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E7E264CFE1800B06DFA /* AssistantMessages.swift */; };
 		53F96E81264CFF7E00B06DFA /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */; };
 		53F96E83264D074400B06DFA /* AssistantError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F96E82264D074400B06DFA /* AssistantError.swift */; };
@@ -44,12 +44,12 @@
 		5353E5582644097100CD35B3 /* InhaChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InhaChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5353E55B2644097100CD35B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5353E55D2644097100CD35B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5353E5622644097100CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5353E5692644097200CD35B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53548AD42654174900F9C137 /* 스크린샷 2021-05-19 오전 12.33.45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-05-19 오전 12.33.45.png"; sourceTree = "<group>"; };
 		53548AD52654175600F9C137 /* 스크린샷 2021-05-19 오전 12.33.45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-05-19 오전 12.33.45.png"; sourceTree = "<group>"; };
+		538896112699857900899216 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		53A659942653812800D04941 /* FirebaseAndCocoaPods.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FirebaseAndCocoaPods.md; sourceTree = "<group>"; };
 		53A659952653815000D04941 /* Section1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section1.md; sourceTree = "<group>"; };
 		53A659962653815E00D04941 /* Section3.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Section3.md; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		533B008E26440D7100381F22 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5353E5612644097100CD35B3 /* Main.storyboard */,
+				538896112699857900899216 /* Main.storyboard */,
 				533B008F26440FEB00381F22 /* LoginViewController.swift */,
 				533B00912644307800381F22 /* SignInViewController.swift */,
 				533B00D026463F0C00381F22 /* PeopleViewController.swift */,
@@ -278,9 +278,9 @@
 				5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */,
 				53F96E81264CFF7E00B06DFA /* BMSCredentials.plist in Resources */,
 				533B008C26440C8F00381F22 /* GoogleService-Info.plist in Resources */,
+				538896122699857900899216 /* Main.storyboard in Resources */,
 				5353E5652644097200CD35B3 /* Assets.xcassets in Resources */,
 				53548AD62654175600F9C137 /* 스크린샷 2021-05-19 오전 12.33.45.png in Resources */,
-				5353E5632644097100CD35B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,14 +352,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5353E5612644097100CD35B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5353E5622644097100CD35B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5353E5662644097200CD35B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

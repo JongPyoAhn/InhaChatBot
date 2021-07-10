@@ -368,39 +368,52 @@
                                     <outlet property="delegate" destination="FY4-ka-APu" id="GNo-dg-P3A"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" id="6l9-Ew-oQb">
-                                <rect key="frame" x="0.0" y="760" width="414" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bye-Ux-drT">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gd-ud-gPO">
-                                        <rect key="frame" x="20" y="10" width="311" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2Y-l3-Zf2">
+                                        <rect key="frame" x="339" y="13" width="50" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Fim-Za-nqp"/>
+                                            <constraint firstAttribute="height" constant="34" id="zqm-2i-Awu"/>
+                                        </constraints>
+                                        <state key="normal" title="전송">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gd-ud-gPO">
+                                        <rect key="frame" x="15" y="13" width="294" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="FY4-ka-APu" id="ut8-VJ-qPy"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2Y-l3-Zf2">
-                                        <rect key="frame" x="350" y="10" width="47" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <state key="normal" title="전송">
-                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sendButtonTabbed:" destination="FY4-ka-APu" eventType="touchUpInside" id="5lA-oH-3wr"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="G2Y-l3-Zf2" secondAttribute="trailing" constant="25" id="OlC-ml-qvS"/>
+                                    <constraint firstAttribute="height" constant="60" id="QNW-4l-1P9"/>
+                                    <constraint firstItem="G2Y-l3-Zf2" firstAttribute="centerY" secondItem="Bye-Ux-drT" secondAttribute="centerY" id="b6b-fP-0Kg"/>
+                                    <constraint firstItem="6Gd-ud-gPO" firstAttribute="leading" secondItem="Bye-Ux-drT" secondAttribute="leading" constant="15" id="bxS-ap-AkX"/>
+                                    <constraint firstItem="6Gd-ud-gPO" firstAttribute="centerY" secondItem="Bye-Ux-drT" secondAttribute="centerY" id="ePq-Vk-aQD"/>
+                                    <constraint firstAttribute="width" constant="414" id="fJK-4b-4WK"/>
+                                    <constraint firstItem="G2Y-l3-Zf2" firstAttribute="leading" secondItem="6Gd-ud-gPO" secondAttribute="trailing" constant="30" id="ynH-ZX-acH"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eys-Ad-f2V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eys-Ad-f2V" firstAttribute="bottom" secondItem="Bye-Ux-drT" secondAttribute="bottom" id="6UG-u8-Fqw"/>
+                            <constraint firstItem="Bye-Ux-drT" firstAttribute="leading" secondItem="Eys-Ad-f2V" secondAttribute="leading" id="KPS-Z6-OqW"/>
+                            <constraint firstItem="Eys-Ad-f2V" firstAttribute="trailing" secondItem="Bye-Ux-drT" secondAttribute="trailing" id="fpO-px-z5F"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="채팅" id="Ahx-o8-cG0"/>
                     <connections>
+                        <outlet property="inputViewBottom" destination="6UG-u8-Fqw" id="adF-pY-Sw7"/>
                         <outlet property="sendButton" destination="G2Y-l3-Zf2" id="B4c-Dw-Xqd"/>
                         <outlet property="tableview" destination="7Cq-qo-nTn" id="mg7-r2-iiv"/>
                         <outlet property="textfield_message" destination="6Gd-ud-gPO" id="FV5-e2-1oU"/>
