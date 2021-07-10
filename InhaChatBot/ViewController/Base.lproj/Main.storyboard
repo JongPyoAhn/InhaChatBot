@@ -72,6 +72,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="로그인"/>
+                                <connections>
+                                    <action selector="loginButtonTabbed:" destination="9AA-od-yzW" eventType="touchUpInside" id="9wT-sM-F4g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odY-gn-rmq">
                                 <rect key="frame" x="97" y="709" width="228" height="33"/>
@@ -88,6 +91,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mqf-tw-frV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1K1-O3-YWc" firstAttribute="top" secondItem="Q5O-Al-wnx" secondAttribute="bottom" constant="22" id="DXo-qv-gLU"/>
                             <constraint firstItem="Q5O-Al-wnx" firstAttribute="leading" secondItem="mqf-tw-frV" secondAttribute="leading" constant="57" id="Ddr-fU-ijs"/>
@@ -108,6 +112,9 @@
                             <constraint firstItem="mqf-tw-frV" firstAttribute="trailing" secondItem="5lf-ns-xTw" secondAttribute="trailing" constant="57" id="xEv-GZ-cuu"/>
                             <constraint firstItem="1K1-O3-YWc" firstAttribute="leading" secondItem="mqf-tw-frV" secondAttribute="leading" constant="57" id="yDa-Ey-D0D"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bzU-VM-OBX" appends="YES" id="sDe-Wn-1mp"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailText" destination="Q5O-Al-wnx" id="3Mt-BW-lMj"/>
@@ -119,6 +126,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlX-Vr-yOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bzU-VM-OBX">
+                    <connections>
+                        <action selector="TabBG:" destination="9AA-od-yzW" id="j6I-Ub-Y4T"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="790" y="136"/>
         </scene>

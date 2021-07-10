@@ -17,16 +17,14 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginBtn.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
     }
     
     //회원가입 버튼 클릭
     @IBAction func joinButttonTabbed(_ sender: Any) {
         self.performSegue(withIdentifier: "signSegue", sender: nil)
     }
-    
     //로그인 버튼 클릭
-    @objc func loginEvent(){
+    @IBAction func loginButtonTabbed(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailText.text!, password: pwText.text!) {
             (user, err) in
             if(err != nil){
@@ -38,19 +36,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
-    // 화면 터치 시 키보드 내리기 ( 뷰 컨트롤러에 터치가 시작되는 시점에 동작 )
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.emailText.resignFirstResponder()
-        self.pwText.resignFirstResponder()
+    
+    //키보드 내리기
+    @IBAction func TabBG(_ sender: Any){
+        emailText.resignFirstResponder()
+        pwText.resignFirstResponder()
     }
 }
-class LogManager {
-    static let shared = LogManager()
-    
-    
-    
-}
-class LogViewModel {
-    
-}
+
