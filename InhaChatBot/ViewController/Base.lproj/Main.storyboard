@@ -671,6 +671,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="이미 계정이 있으신가요? 로그인"/>
+                                <connections>
+                                    <action selector="turnOffJoinButtonTabbed:" destination="cwx-L2-E2g" eventType="touchUpInside" id="GX1-Aj-WCN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="학번" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOC-sh-ZwR" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="57" y="494" width="300" height="45"/>
@@ -705,10 +708,14 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="회원가입"/>
+                                <connections>
+                                    <action selector="joinButtonTabbed:" destination="cwx-L2-E2g" eventType="touchUpInside" id="uBS-j9-zZ1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zjj-Qg-0us"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Zjj-Qg-0us" firstAttribute="trailing" secondItem="GOC-sh-ZwR" secondAttribute="trailing" constant="57" id="0c0-5z-Muh"/>
                             <constraint firstItem="Zjj-Qg-0us" firstAttribute="trailing" secondItem="gss-uS-hym" secondAttribute="trailing" constant="89" id="7tB-Bp-kcb"/>
@@ -729,16 +736,24 @@
                             <constraint firstItem="lxo-R6-hfT" firstAttribute="leading" secondItem="Zjj-Qg-0us" secondAttribute="leading" constant="57" id="uKy-Bs-gjs"/>
                             <constraint firstItem="q2J-5b-Cjc" firstAttribute="leading" secondItem="Zjj-Qg-0us" secondAttribute="leading" constant="107" id="zMP-bE-oHP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yvs-GC-j0H" appends="YES" id="7xr-yv-UcH"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailText" destination="lxo-R6-hfT" id="JDX-Ol-PMg"/>
                         <outlet property="numofSchoolText" destination="GOC-sh-ZwR" id="yeC-kq-pJg"/>
                         <outlet property="passwordText" destination="QYJ-38-HvW" id="OZ6-EP-1AN"/>
                         <outlet property="signBtn" destination="haV-M8-Xd4" id="PUd-0g-9fi"/>
-                        <outlet property="turnOfLoginBtn" destination="gss-uS-hym" id="pjl-ss-M3N"/>
+                        <outlet property="turnOffJoinButton" destination="gss-uS-hym" id="HQ7-2M-Nil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42s-9L-ZN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Yvs-GC-j0H">
+                    <connections>
+                        <action selector="TabBG:" destination="cwx-L2-E2g" id="fGw-eJ-X0Q"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="790" y="815"/>
         </scene>
