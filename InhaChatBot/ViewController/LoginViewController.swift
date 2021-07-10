@@ -18,7 +18,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+}
+
+extension LoginViewController{
     //회원가입 버튼 클릭
     @IBAction func joinButttonTabbed(_ sender: Any) {
         self.performSegue(withIdentifier: "signSegue", sender: nil)

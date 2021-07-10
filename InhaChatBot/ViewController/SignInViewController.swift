@@ -14,23 +14,19 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signBtn: UIButton!
     @IBOutlet weak var numofSchoolText: UITextField!
     @IBOutlet weak var turnOffJoinButton: UIButton!
-    //MARK: -MAIN
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    //MARK: -Method
+}
+extension SignInViewController{
     //회원가입 버튼 클릭
     @IBAction func joinButtonTabbed(_ sender: Any) {
-        guard let email = self.emailText.text else{
-        return
-        }
-        guard let password = self.passwordText.text else {
-        return
-        }
+        guard let email = self.emailText.text else{return}
+        guard let password = self.passwordText.text else {return}
         Auth.auth().createUser(withEmail: email, password: password) {
             (user, err) in
             let uid = user?.user.uid
-
             //학번, UID값 맵으로 생성
             var userModel = UserModel()
             userModel.StudentID = self.numofSchoolText.text

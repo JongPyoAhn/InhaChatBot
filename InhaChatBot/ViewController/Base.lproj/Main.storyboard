@@ -172,6 +172,9 @@
                                     <state key="normal" title="챗봇과 대화하기!!">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="chatbotButtonTabbed:" destination="Fux-a2-haQ" eventType="touchUpInside" id="t07-Fz-yxB"/>
+                                    </connections>
                                 </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="61" id="xSn-S2-Ddz" customClass="PersonCell" customModule="InhaChatBot" customModuleProvider="target">
@@ -216,8 +219,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Fux-a2-haQ" id="VxJ-Ls-g3h"/>
-                                    <outlet property="delegate" destination="Fux-a2-haQ" id="SRK-of-2qa"/>
+                                    <outlet property="dataSource" destination="Fux-a2-haQ" id="lAc-h6-Xp4"/>
+                                    <outlet property="delegate" destination="Fux-a2-haQ" id="LZz-i5-Tfl"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -226,7 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="목록" id="yLc-NK-ECQ"/>
                     <connections>
-                        <outlet property="chatbotBtn" destination="01U-Da-mdF" id="vgE-UZ-3hm"/>
+                        <outlet property="chatbotButton" destination="01U-Da-mdF" id="hso-v5-e0r"/>
                         <outlet property="tableview" destination="xb9-yo-ewr" id="vTV-Ps-ayv"/>
                         <segue destination="FY4-ka-APu" kind="push" identifier="QuestionChatSegue" id="bad-0G-qa1"/>
                         <segue destination="d9J-s7-6bm" kind="push" identifier="chatbotSegue" id="Iax-zg-0KY"/>
