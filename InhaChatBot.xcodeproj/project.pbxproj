@@ -19,7 +19,6 @@
 		533B00D72647AB4C00381F22 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533B00D62647AB4C00381F22 /* Util.swift */; };
 		5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55B2644097100CD35B3 /* AppDelegate.swift */; };
 		5353E55E2644097100CD35B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55D2644097100CD35B3 /* SceneDelegate.swift */; };
-		5353E5602644097100CD35B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353E55F2644097100CD35B3 /* ViewController.swift */; };
 		5353E5632644097100CD35B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5612644097100CD35B3 /* Main.storyboard */; };
 		5353E5652644097200CD35B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5642644097200CD35B3 /* Assets.xcassets */; };
 		5353E5682644097200CD35B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5353E5662644097200CD35B3 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		5353E5582644097100CD35B3 /* InhaChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InhaChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5353E55B2644097100CD35B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5353E55D2644097100CD35B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5353E55F2644097100CD35B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5353E5622644097100CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5353E5642644097200CD35B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5353E5672644097200CD35B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +86,7 @@
 		533B008E26440D7100381F22 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5353E55F2644097100CD35B3 /* ViewController.swift */,
+				5353E5612644097100CD35B3 /* Main.storyboard */,
 				533B008F26440FEB00381F22 /* LoginViewController.swift */,
 				533B00912644307800381F22 /* SignInViewController.swift */,
 				533B00D026463F0C00381F22 /* PeopleViewController.swift */,
@@ -131,18 +129,17 @@
 		5353E55A2644097100CD35B3 /* InhaChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				533B009526450A1300381F22 /* Model */,
-				533B008E26440D7100381F22 /* ViewController */,
+				5353E5692644097200CD35B3 /* Info.plist */,
 				5353E55B2644097100CD35B3 /* AppDelegate.swift */,
 				53F96E82264D074400B06DFA /* AssistantError.swift */,
 				533B00D62647AB4C00381F22 /* Util.swift */,
 				5353E55D2644097100CD35B3 /* SceneDelegate.swift */,
-				5353E5612644097100CD35B3 /* Main.storyboard */,
 				5353E5642644097200CD35B3 /* Assets.xcassets */,
 				5353E5662644097200CD35B3 /* LaunchScreen.storyboard */,
 				53F96E80264CFF7E00B06DFA /* BMSCredentials.plist */,
-				5353E5692644097200CD35B3 /* Info.plist */,
 				533B008B26440C8F00381F22 /* GoogleService-Info.plist */,
+				533B009526450A1300381F22 /* Model */,
+				533B008E26440D7100381F22 /* ViewController */,
 			);
 			path = InhaChatBot;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				533B00CD26463EB800381F22 /* ChatBotViewController.swift in Sources */,
 				533B00D52646431D00381F22 /* ChatModel.swift in Sources */,
 				53F96E83264D074400B06DFA /* AssistantError.swift in Sources */,
-				5353E5602644097100CD35B3 /* ViewController.swift in Sources */,
 				53F96E7F264CFE1800B06DFA /* AssistantMessages.swift in Sources */,
 				5353E55C2644097100CD35B3 /* AppDelegate.swift in Sources */,
 				533B00922644307800381F22 /* SignInViewController.swift in Sources */,

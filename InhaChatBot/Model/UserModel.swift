@@ -17,7 +17,6 @@ struct UserModel: Mappable{
     
     mutating func mapping(map: Map) {
         uid <- map["uid"]
-//        pushToken <- map["pushToken"]
         StudentID <- map["StudentID"]
     }
 }
