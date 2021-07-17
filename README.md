@@ -1,5 +1,5 @@
 # IOS 인하 챗봇 (Watson Assistant and Firebase)
-첫 IOS 프로젝트 입니다.
+첫 IOS 프로젝트 입니다.</br>
 영상 : https://www.youtube.com/watch?v=9kNHp2lNksI
 - 로그인을 할 수 있는 인증 라이브러리 사용
 - 정보를 저장할 수 있는 데이터베이스 사용
